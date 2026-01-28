@@ -44,18 +44,18 @@ export default function Contact() {
           </p>
 
           <div className="space-y-6">
-            <a href="mailto:hello@portfolio.com" className="flex items-center gap-4 text-xl hover:text-primary transition-colors group">
+            <a href="mailto:bhoomikasj1234@gmail.com" className="flex items-center gap-4 text-xl hover:text-primary transition-colors group">
               <div className="p-4 rounded-full bg-secondary/30 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 <Mail size={24} />
               </div>
-              <span>hello@portfolio.com</span>
+              <span>bhoomikasj1234@gmail.com</span>
             </a>
             
             <div className="flex items-center gap-4 text-xl text-muted-foreground">
               <div className="p-4 rounded-full bg-secondary/30">
                 <MapPin size={24} />
               </div>
-              <span>San Francisco, CA</span>
+              <span>Mysuru, India</span>
             </div>
           </div>
         </motion.div>

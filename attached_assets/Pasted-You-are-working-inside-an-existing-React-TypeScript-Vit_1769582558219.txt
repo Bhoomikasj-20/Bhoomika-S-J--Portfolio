@@ -1,0 +1,83 @@
+You are working inside an existing React + TypeScript + Vite portfolio project.
+Your task is ONLY to update CONTENT (text, images, links) using my personal information.
+
+STRICT RULES (VERY IMPORTANT):
+- DO NOT change layout, animations, transitions, 3D effects, styling, theme, colors, Tailwind config, Three.js, Barba.js behavior, or component structure.
+- DO NOT refactor code.
+- DO NOT rename files or folders.
+- DO NOT touch config files (vite.config.ts, tailwind.config.ts, tsconfig, drizzle config, etc.).
+- ONLY update text content, image sources, and data/constants if present.
+
+========================
+PERSONAL INFORMATION
+========================
+
+Name: Bhoomika S J  
+Role/Title (Hero section):  
+"AI & ML Engineering Student | Frontend & Data Science Enthusiast"
+
+Short Hero Tagline:
+"Building intelligent, user-centric digital experiences with AI and modern web technologies."
+
+About Section Text:
+"I am a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Maharaja Institute of Technology Mysore (GPA: 8.79). I have hands-on experience in Python, machine learning fundamentals, and frontend development. I enjoy building real-world projects that combine clean UI with intelligent data-driven systems."
+
+Education:
+- BE CSE (AI & ML), Maharaja Institute of Technology Mysore (2023–2027) – GPA 8.79
+- PCMB, Sri Jayachamarajendra PU College, Mysuru – 89%
+
+Internship / Experience:
+- Mobile App Development Intern, Runshaw Technologies Pvt. Ltd. (Jul–Aug 2025)
+  Worked on real-world Android applications using Flutter and Dart.
+
+Skills:
+Technical:
+Python, Machine Learning Basics, Data Science Fundamentals, C, Java (Basics), DSA, OOP,
+Flutter, HTML, CSS, SQL, MongoDB, Data Visualization
+
+Tools:
+VS Code, PyCharm, GitHub, Jupyter Notebook, Android Studio, Google Colab
+
+Soft Skills:
+Problem Solving, Team Collaboration, Adaptability, Quick Learner, Time Management
+
+Projects:
+1. Asset Tracking Agent (2025)
+   - Agentic AI-based system for intelligent asset tracking and monitoring.
+2. E-commerce Sentiment Analysis
+   - SVM-based sentiment classification using Python, scikit-learn, pandas, matplotlib.
+3. SerenityAI – Mental Health Companion
+   - AI-based mental health assistant using Python and LLMs for sentiment analysis.
+4. Theft Alert Notification System (ESP8266)
+   - IoT-based theft detection system with real-time alerts using Blynk.
+
+Certifications:
+- Data Science – IBM
+- Data Analytics & Data Science – HP Life (2025)
+- Microsoft Azure Cloud Services – Microsoft
+- Network Security – Google
+
+Publication:
+- "AI-Powered Asset Tracking Agent Using Agentic Artificial Intelligence", IJCRT, Jan 2026
+
+Contact Information:
+Email: bhoomikasj1234@gmail.com  
+GitHub: https://github.com/Bhoomikasj-20  
+LinkedIn: https://linkedin.com/in/bhoomika-sj  
+Location: Mysuru, India
+
+========================
+IMAGE INSTRUCTIONS
+========================
+- Add a professional profile photo for me in the Hero / About section.
+- Place the image inside the existing assets or public images folder.
+- Only update the image path reference in the component.
+- Do NOT change image styling, size, animations, or positioning.
+
+========================
+IMPLEMENTATION INSTRUCTIONS
+========================
+- Update existing components such as Hero, About, Skills, Experience/Work, Projects, and Contact.
+- If the project uses a data/constants file, update content there instead of hardcoding.
+- Ensure the site compiles without errors.
+- Keep everything else exactly the same.

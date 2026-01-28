@@ -23,9 +23,9 @@ export default function Home() {
           </motion.h2>
           
           <h1 className="text-5xl md:text-8xl font-display font-bold mb-6 tracking-tight leading-tight">
-            <span className="block text-foreground drop-shadow-lg">Creative</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient bg-300%">
-              Developer
+            <span className="block text-foreground drop-shadow-lg">Bhoomika S J</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient bg-300% text-4xl md:text-6xl mt-4">
+              AI & ML Engineering Student
             </span>
           </h1>
 
@@ -35,8 +35,7 @@ export default function Home() {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground max-w-xl md:ml-2 mb-10 leading-relaxed"
           >
-            Building immersive digital experiences with modern web technologies.
-            Specialized in React, 3D interactions, and clean UI design.
+            Building intelligent, user-centric digital experiences with AI and modern web technologies.
           </motion.p>
 
           <motion.div 

@@ -54,77 +54,82 @@ export async function registerRoutes(
 async function seedDatabase() {
   await storage.seedProjects([
     {
-      title: "Neon Nexus",
-      description: "A cyberpunk-themed e-commerce platform with 3D product previews.",
+      title: "Asset Tracking Agent",
+      description: "Agentic AI-based system for intelligent asset tracking and monitoring.",
       imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80",
-      tags: ["React", "Three.js", "Node.js"],
+      tags: ["AI", "Python", "Agentic AI"],
       featured: true,
       order: 1,
       demoUrl: "#",
       repoUrl: "#"
     },
     {
-      title: "Flow State",
-      description: "Productivity app with ambient soundscapes and smooth animations.",
+      title: "E-commerce Sentiment Analysis",
+      description: "SVM-based sentiment classification using Python, scikit-learn, pandas, matplotlib.",
       imageUrl: "https://images.unsplash.com/photo-1519638399535-1b036603ac77?auto=format&fit=crop&q=80",
-      tags: ["TypeScript", "Next.js", "Framer Motion"],
+      tags: ["Machine Learning", "Python", "Sentiment Analysis"],
       featured: true,
       order: 2,
       demoUrl: "#",
       repoUrl: "#"
     },
     {
-      title: "Data Viz Dashboard",
-      description: "Interactive real-time data visualization for financial markets.",
+      title: "SerenityAI – Mental Health Companion",
+      description: "AI-based mental health assistant using Python and LLMs for sentiment analysis.",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
-      tags: ["D3.js", "React", "WebSocket"],
-      featured: false,
+      tags: ["LLM", "Python", "Mental Health"],
+      featured: true,
       order: 3,
+      demoUrl: "#",
+      repoUrl: "#"
+    },
+    {
+      title: "Theft Alert Notification System",
+      description: "IoT-based theft detection system with real-time alerts using ESP8266 and Blynk.",
+      imageUrl: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80",
+      tags: ["IoT", "ESP8266", "Blynk"],
+      featured: false,
+      order: 4,
       demoUrl: "#",
       repoUrl: "#"
     }
   ]);
 
   await storage.seedSkills([
-    { name: "React", category: "Frontend", proficiency: 95, icon: "SiReact" },
-    { name: "TypeScript", category: "Languages", proficiency: 90, icon: "SiTypescript" },
-    { name: "Node.js", category: "Backend", proficiency: 85, icon: "SiNodedotjs" },
-    { name: "Three.js", category: "Creative", proficiency: 80, icon: "SiThree" },
-    { name: "PostgreSQL", category: "Database", proficiency: 75, icon: "SiPostgresql" },
-    { name: "Figma", category: "Design", proficiency: 85, icon: "SiFigma" }
+    { name: "Python", category: "Technical", proficiency: 95, icon: "SiPython" },
+    { name: "Machine Learning", category: "Technical", proficiency: 85, icon: "SiScikitlearn" },
+    { name: "Data Science", category: "Technical", proficiency: 85, icon: "SiPandas" },
+    { name: "Flutter", category: "Technical", proficiency: 80, icon: "SiFlutter" },
+    { name: "SQL", category: "Technical", proficiency: 80, icon: "SiPostgresql" },
+    { name: "HTML/CSS", category: "Technical", proficiency: 90, icon: "SiHtml5" },
+    { name: "GitHub", category: "Tools", proficiency: 90, icon: "SiGithub" },
+    { name: "Android Studio", category: "Tools", proficiency: 80, icon: "SiAndroidstudio" }
   ]);
 
   await storage.seedExperience([
     {
-      role: "Senior Frontend Developer",
-      company: "TechNova",
-      period: "2023 - Present",
-      description: "Leading the frontend team in building immersive web experiences using React and WebGL.",
+      role: "Mobile App Development Intern",
+      company: "Runshaw Technologies Pvt. Ltd.",
+      period: "Jul – Aug 2025",
+      description: "Worked on real-world Android applications using Flutter and Dart.",
       order: 1
-    },
-    {
-      role: "Full Stack Engineer",
-      company: "Creative Solutions",
-      period: "2021 - 2023",
-      description: "Developed scalable web applications and integrated 3D visualizations for client projects.",
-      order: 2
-    },
-    {
-      role: "Junior Web Developer",
-      company: "StartUp Inc.",
-      period: "2019 - 2021",
-      description: "Assisted in the development of responsive websites and implemented UI/UX best practices.",
-      order: 3
     }
   ]);
 
   await storage.seedEducation([
     {
-      degree: "B.S. Computer Science",
-      institution: "University of Innovation",
-      year: "2019",
-      description: "Focus on Computer Graphics and Human-Computer Interaction.",
+      degree: "BE CSE (AI & ML)",
+      institution: "Maharaja Institute of Technology Mysore",
+      year: "2023 – 2027",
+      description: "GPA: 8.79",
       order: 1
+    },
+    {
+      degree: "PCMB",
+      institution: "Sri Jayachamarajendra PU College, Mysuru",
+      year: "2021 - 2023",
+      description: "Score: 89%",
+      order: 2
     }
   ]);
 }

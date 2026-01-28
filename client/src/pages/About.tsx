@@ -29,11 +29,7 @@ export default function About() {
             <h2 className="text-2xl font-bold font-display">Who I Am</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I'm a passionate developer with a keen eye for design. I bridge the gap between 
-            engineering and aesthetics, creating software that not only functions flawlessly 
-            but also looks beautiful. My journey started with simple static sites and evolved 
-            into building complex, interactive 3D web applications. When I'm not coding, 
-            I'm exploring new design trends or contributing to open source.
+            I am a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Maharaja Institute of Technology Mysore (GPA: 8.79). I have hands-on experience in Python, machine learning fundamentals, and frontend development. I enjoy building real-world projects that combine clean UI with intelligent data-driven systems.
           </p>
         </motion.div>
 
@@ -42,19 +38,13 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="glass-panel p-8 rounded-3xl flex flex-col justify-center items-center text-center relative overflow-hidden group"
+          className="glass-panel p-0 rounded-3xl flex flex-col justify-center items-center text-center relative overflow-hidden group"
         >
-           {/* Placeholder for avatar - using descriptive comment */}
-           {/* Unsplash abstract tech image */}
            <img 
-             src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&h=500&fit=crop"
-             alt="Abstract design"
-             className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity"
+             src="/profile.png"
+             alt="Bhoomika S J"
+             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
            />
-           <div className="relative z-10">
-             <h3 className="text-5xl font-display font-bold mb-2">3+</h3>
-             <p className="text-muted-foreground">Years of Experience</p>
-           </div>
         </motion.div>
 
         {/* Interests - Stacked */}
@@ -68,9 +58,9 @@ export default function About() {
             <div className="p-3 rounded-full bg-accent/10 text-accent">
               <Code2 size={24} />
             </div>
-            <h3 className="text-xl font-bold">Tech Stack</h3>
+            <h3 className="text-xl font-bold">Soft Skills</h3>
           </div>
-          <p className="text-muted-foreground">React, TypeScript, Node.js, WebGL, PostgreSQL</p>
+          <p className="text-muted-foreground">Problem Solving, Team Collaboration, Adaptability, Quick Learner, Time Management</p>
         </motion.div>
 
         <motion.div 
@@ -83,9 +73,9 @@ export default function About() {
             <div className="p-3 rounded-full bg-pink-500/10 text-pink-500">
               <Heart size={24} />
             </div>
-            <h3 className="text-xl font-bold">Passions</h3>
+            <h3 className="text-xl font-bold">Certifications</h3>
           </div>
-          <p className="text-muted-foreground">UI/UX Design, 3D Modeling, Mechanical Keyboards</p>
+          <p className="text-muted-foreground">IBM (Data Science), HP Life (Data Analytics), Microsoft Azure, Google (Network Security)</p>
         </motion.div>
 
         <motion.div 
@@ -98,9 +88,9 @@ export default function About() {
             <div className="p-3 rounded-full bg-orange-500/10 text-orange-500">
               <Coffee size={24} />
             </div>
-            <h3 className="text-xl font-bold">Fuel</h3>
+            <h3 className="text-xl font-bold">Publication</h3>
           </div>
-          <p className="text-muted-foreground">Espresso, Lofi Hip Hop, Late Night Coding</p>
+          <p className="text-muted-foreground">"AI-Powered Asset Tracking Agent Using Agentic Artificial Intelligence", IJCRT, Jan 2026</p>
         </motion.div>
       </div>
     </PageTransition>
