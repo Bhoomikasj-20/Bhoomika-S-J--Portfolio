@@ -33,10 +33,8 @@ export default function About() {
           <p className="text-lg text-muted-foreground leading-relaxed">
             I am a Computer Science Engineering student specializing in
             Artificial Intelligence and Machine Learning at Maharaja Institute
-            of Technology Mysore with a GPA of 8.79. I have hands-on experience
-            in Python, machine learning fundamentals, and frontend development.
-            I enjoy building real-world projects that combine clean UI design
-            with intelligent, data-driven systems.
+            of Technology Mysore. I enjoy building real-world projects that
+            strengthen my skills in AI, machine learning, and data science.
           </p>
         </motion.div>
 

@@ -1,0 +1,84 @@
+You are working inside an existing React + TypeScript portfolio project.
+
+========================
+CRITICAL RULES (MUST FOLLOW)
+========================
+- DO NOT change layout, styling, animations, transitions, or UI structure.
+- DO NOT modify PageTransition, ProjectCard, Framer Motion logic, or navigation.
+- DO NOT refactor or remove existing code.
+- DO NOT remove or change existing projects.
+- ONLY add the two new projects listed below.
+- Ensure the application builds and runs without errors.
+
+========================
+TARGET FILE
+========================
+- Update ONLY: src/pages/Projects.tsx
+
+========================
+TASK
+========================
+Append two new projects to the existing projects list in a safe way.
+Do NOT hardcode over existing projects.
+Merge new projects with the current projects returned by useProjects().
+
+========================
+PROJECT 1
+========================
+ID: todo-timer
+
+Title:
+Todo Timer – Study Productivity Web App
+
+Description:
+Designed and developed a web-based productivity application to help students manage tasks and track focused study sessions using a task-based todo system.
+
+Tags:
+HTML, CSS, JavaScript, Web Development, Productivity
+
+Image:
+Use /todo-timer.png (place image in client/public)
+
+Link:
+Leave empty for now
+
+Featured:
+false
+
+========================
+PROJECT 2
+========================
+ID: workout-tracker
+
+Title:
+Workout Tracker – Android Application
+
+Description:
+Developed a native Android application to track daily workout routines with a user-friendly interface for logging and managing fitness activities.
+
+Tags:
+Android Studio, Java, Mobile App Development, OOP
+
+Image:
+Use /workout-tracker.png (place image in client/public)
+
+Link:
+Leave empty for now
+
+Featured:
+false
+
+========================
+IMPLEMENTATION NOTES
+========================
+- Create a local array for these two projects.
+- Merge them with the existing `projects` data from useProjects().
+- Ensure the project count updates correctly.
+- Keep all animations, layout, and styles unchanged.
+
+========================
+FINAL CHECK
+========================
+- No TypeScript errors
+- No UI or animation changes
+- Both projects appear correctly in the Projects page
