@@ -1,0 +1,137 @@
+You are working inside an existing React + TypeScript + Vite portfolio project.
+
+========================
+CRITICAL RULES (DO NOT BREAK)
+========================
+- DO NOT change layout, UI structure, animations, transitions, effects, theme, colors, spacing, or styling.
+- DO NOT modify PageTransition, Framer Motion configs, Three.js, Barba.js, or navigation behavior.
+- DO NOT refactor or restructure components.
+- DO NOT rename files or folders.
+- DO NOT touch configuration files (vite.config.ts, tailwind.config.ts, tsconfig, drizzle, etc.).
+- ONLY update text content, image source paths, and links.
+- Ensure the app runs without errors after changes.
+
+========================
+IMAGE UPDATE (VERY IMPORTANT)
+========================
+- Replace the existing demo/profile image with the user-uploaded professional photo.
+- The image is already uploaded into the project.
+- Move or place the image inside the existing `client/public/` folder.
+- Use a simple filename such as `profile.jpg`.
+- Update ONLY the `<img src="...">` path to `/profile.jpg`.
+- DO NOT change image size, styling, hover effects, or animations.
+
+========================
+CONTENT SOURCE
+========================
+Use ONLY the information provided below.
+DO NOT invent job roles, companies, or senior-level experience.
+
+========================
+PERSONAL INFORMATION
+========================
+Name: Bhoomika S J  
+Location: Mysuru, India  
+Email: bhoomikasj1234@gmail.com  
+GitHub: https://github.com/Bhoomikasj-20  
+LinkedIn: https://linkedin.com/in/bhoomika-sj  
+
+Hero Role / Title:
+AI & ML Engineering Student | Frontend & Data Science Enthusiast
+
+Hero Subtitle:
+Building intelligent, user-centric digital experiences using AI and modern web technologies.
+
+========================
+ABOUT PAGE
+========================
+Update the About page text to:
+
+"I am a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Maharaja Institute of Technology Mysore with a GPA of 8.79. I have hands-on experience in Python, machine learning fundamentals, and frontend development. I enjoy building real-world projects that combine clean UI design with intelligent, data-driven systems."
+
+========================
+EDUCATION
+========================
+- BE CSE (AI & ML), Maharaja Institute of Technology Mysore (2023–2027) – GPA 8.79
+- PCMB, Sri Jayachamarajendra PU College, Mysuru – 89%
+
+========================
+EXPERIENCE PAGE (REPLACE DEMO CONTENT)
+========================
+Remove any fake roles such as "Senior Frontend Developer" or unrelated companies.
+
+Add ONLY:
+
+Mobile App Development Intern  
+Runshaw Technologies Pvt. Ltd. | Jul – Aug 2025  
+- Worked on real-world Android applications using Flutter and Dart.
+- Gained hands-on experience in mobile UI development and app logic.
+
+========================
+WORK / PROJECTS PAGE
+========================
+Replace demo projects with the following:
+
+1. Asset Tracking Agent (2025)
+   - Agentic AI-based system for intelligent asset tracking and monitoring.
+   - Improved asset visibility and tracking efficiency.
+
+2. E-commerce Sentiment Analysis
+   - Built an SVM-based model to classify customer reviews.
+   - Used Python, scikit-learn, pandas, and matplotlib.
+
+3. SerenityAI – Mental Health Companion
+   - AI-based mental health assistant using Python and LLMs.
+   - Enabled early detection of emotional stress indicators.
+
+4. Theft Alert Notification System (ESP8266)
+   - IoT-based theft detection system with real-time alerts using Blynk.
+
+========================
+SKILLS PAGE
+========================
+Update skills to reflect:
+
+Frontend:
+HTML, CSS, React (Basics), Tailwind CSS
+
+Programming & CS:
+Python, C, Java (Basics), DSA, OOP
+
+AI / Data:
+Machine Learning Fundamentals, Data Science Basics, Data Visualization
+
+Tools:
+VS Code, PyCharm, GitHub, Jupyter Notebook, Android Studio, Google Colab
+
+Soft Skills:
+Problem Solving, Team Collaboration, Adaptability, Quick Learner, Time Management
+
+========================
+CERTIFICATIONS
+========================
+- Data Science – IBM
+- Data Analytics & Data Science – HP Life (2025)
+- Microsoft Azure Cloud Services – Microsoft
+- Network Security – Google
+
+========================
+PUBLICATION
+========================
+"AI-Powered Asset Tracking Agent Using Agentic Artificial Intelligence", IJCRT, Jan 2026
+
+========================
+CONTACT PAGE
+========================
+Ensure the Contact section includes:
+- Email: bhoomikasj1234@gmail.com
+- LinkedIn profile link
+- GitHub profile link
+- Location: Mysuru, India
+
+========================
+FINAL CHECK
+========================
+- The site should compile and run successfully.
+- All demo/fake content must be replaced.
+- Visual appearance, animations, and layout must remain unchanged.

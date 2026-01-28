@@ -45,17 +45,28 @@ export async function registerRoutes(
     res.json(education);
   });
 
-  // Seed Data
+  // Seed Data with fresh content
   await seedDatabase();
 
   return httpServer;
 }
 
 async function seedDatabase() {
+  const existingProjects = await storage.getProjects();
+  if (existingProjects.length > 0) {
+    // Only re-seed if we have the old demo data
+    const isOldData = existingProjects.some(p => p.title === "Neon Nexus" || p.title === "Asset Tracking Agent");
+    if (isOldData) {
+      await storage.clearAll();
+    } else {
+      return; // Already seeded with correct data
+    }
+  }
+
   await storage.seedProjects([
     {
       title: "Asset Tracking Agent",
-      description: "Agentic AI-based system for intelligent asset tracking and monitoring.",
+      description: "Agentic AI-based system for intelligent asset tracking and monitoring. Improved asset visibility and tracking efficiency.",
       imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80",
       tags: ["AI", "Python", "Agentic AI"],
       featured: true,
@@ -65,9 +76,9 @@ async function seedDatabase() {
     },
     {
       title: "E-commerce Sentiment Analysis",
-      description: "SVM-based sentiment classification using Python, scikit-learn, pandas, matplotlib.",
+      description: "Built an SVM-based model to classify customer reviews. Used Python, scikit-learn, pandas, and matplotlib.",
       imageUrl: "https://images.unsplash.com/photo-1519638399535-1b036603ac77?auto=format&fit=crop&q=80",
-      tags: ["Machine Learning", "Python", "Sentiment Analysis"],
+      tags: ["Machine Learning", "Python", "SVM"],
       featured: true,
       order: 2,
       demoUrl: "#",
@@ -75,9 +86,9 @@ async function seedDatabase() {
     },
     {
       title: "SerenityAI – Mental Health Companion",
-      description: "AI-based mental health assistant using Python and LLMs for sentiment analysis.",
+      description: "AI-based mental health assistant using Python and LLMs. Enabled early detection of emotional stress indicators.",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
-      tags: ["LLM", "Python", "Mental Health"],
+      tags: ["LLM", "Python", "AI"],
       featured: true,
       order: 3,
       demoUrl: "#",
@@ -96,12 +107,19 @@ async function seedDatabase() {
   ]);
 
   await storage.seedSkills([
-    { name: "Python", category: "Technical", proficiency: 95, icon: "SiPython" },
-    { name: "Machine Learning", category: "Technical", proficiency: 85, icon: "SiScikitlearn" },
-    { name: "Data Science", category: "Technical", proficiency: 85, icon: "SiPandas" },
-    { name: "Flutter", category: "Technical", proficiency: 80, icon: "SiFlutter" },
-    { name: "SQL", category: "Technical", proficiency: 80, icon: "SiPostgresql" },
-    { name: "HTML/CSS", category: "Technical", proficiency: 90, icon: "SiHtml5" },
+    { name: "HTML", category: "Frontend", proficiency: 95, icon: "SiHtml5" },
+    { name: "CSS", category: "Frontend", proficiency: 90, icon: "SiCss3" },
+    { name: "React (Basics)", category: "Frontend", proficiency: 70, icon: "SiReact" },
+    { name: "Tailwind CSS", category: "Frontend", proficiency: 85, icon: "SiTailwindcss" },
+    { name: "Python", category: "Programming & CS", proficiency: 95, icon: "SiPython" },
+    { name: "C", category: "Programming & CS", proficiency: 80, icon: "SiC" },
+    { name: "Java (Basics)", category: "Programming & CS", proficiency: 70, icon: "SiOpenjdk" },
+    { name: "DSA", category: "Programming & CS", proficiency: 85, icon: "SiCodestats" },
+    { name: "OOP", category: "Programming & CS", proficiency: 90, icon: "SiObjectiv-c" },
+    { name: "Machine Learning", category: "AI / Data", proficiency: 85, icon: "SiScikitlearn" },
+    { name: "Data Science", category: "AI / Data", proficiency: 80, icon: "SiPandas" },
+    { name: "Data Visualization", category: "AI / Data", proficiency: 85, icon: "SiTableau" },
+    { name: "VS Code", category: "Tools", proficiency: 95, icon: "SiVisualstudiocode" },
     { name: "GitHub", category: "Tools", proficiency: 90, icon: "SiGithub" },
     { name: "Android Studio", category: "Tools", proficiency: 80, icon: "SiAndroidstudio" }
   ]);
@@ -111,7 +129,7 @@ async function seedDatabase() {
       role: "Mobile App Development Intern",
       company: "Runshaw Technologies Pvt. Ltd.",
       period: "Jul – Aug 2025",
-      description: "Worked on real-world Android applications using Flutter and Dart.",
+      description: "Worked on real-world Android applications using Flutter and Dart. Gained hands-on experience in mobile UI development and app logic.",
       order: 1
     }
   ]);

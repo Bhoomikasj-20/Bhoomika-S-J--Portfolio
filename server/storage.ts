@@ -20,6 +20,9 @@ export interface IStorage {
   seedSkills(skills: InsertSkill[]): Promise<void>;
   seedExperience(experience: InsertExperience[]): Promise<void>;
   seedEducation(education: InsertEducation[]): Promise<void>;
+  
+  // Clear methods to allow re-seeding with correct data
+  clearAll(): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -45,27 +48,26 @@ export class DatabaseStorage implements IStorage {
   }
 
   async seedProjects(data: InsertProject[]): Promise<void> {
-    if ((await this.getProjects()).length === 0) {
-      await db.insert(projects).values(data);
-    }
+    await db.insert(projects).values(data);
   }
 
   async seedSkills(data: InsertSkill[]): Promise<void> {
-    if ((await this.getSkills()).length === 0) {
-      await db.insert(skills).values(data);
-    }
+    await db.insert(skills).values(data);
   }
 
   async seedExperience(data: InsertExperience[]): Promise<void> {
-    if ((await this.getExperience()).length === 0) {
-      await db.insert(experience).values(data);
-    }
+    await db.insert(experience).values(data);
   }
 
   async seedEducation(data: InsertEducation[]): Promise<void> {
-    if ((await this.getEducation()).length === 0) {
-      await db.insert(education).values(data);
-    }
+    await db.insert(education).values(data);
+  }
+
+  async clearAll(): Promise<void> {
+    await db.delete(projects);
+    await db.delete(skills);
+    await db.delete(experience);
+    await db.delete(education);
   }
 }
 
