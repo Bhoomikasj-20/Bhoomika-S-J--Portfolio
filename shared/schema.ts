@@ -1,39 +1,39 @@
-import { pgTable, text, serial, integer, boolean, timestamp, jsonb } from "drizzle-orm/pg-core";
+import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
 // === TABLE DEFINITIONS ===
 
-export const messages = pgTable("messages", {
-  id: serial("id").primaryKey(),
+export const messages = sqliteTable("messages", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
   name: text("name").notNull(),
   email: text("email").notNull(),
   message: text("message").notNull(),
-  createdAt: timestamp("created_at").defaultNow(),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
 
-export const projects = pgTable("projects", {
-  id: serial("id").primaryKey(),
+export const projects = sqliteTable("projects", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
   title: text("title").notNull(),
   description: text("description").notNull(),
   imageUrl: text("image_url").notNull(),
   demoUrl: text("demo_url"),
   repoUrl: text("repo_url"),
-  tags: text("tags").array().notNull(), // PostgreSQL array
-  featured: boolean("featured").default(false),
+  tags: text("tags", { mode: "json" }).$type<string[]>().notNull(),
+  featured: integer("featured", { mode: "boolean" }).default(false), // SQLite uses 0/1 for booleans
   order: integer("order").default(0),
 });
 
-export const skills = pgTable("skills", {
-  id: serial("id").primaryKey(),
+export const skills = sqliteTable("skills", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
   name: text("name").notNull(),
   category: text("category").notNull(), // 'frontend', 'backend', 'tools', 'soft'
   proficiency: integer("proficiency").default(0), // 0-100
   icon: text("icon"), // Lucide icon name or image url
 });
 
-export const experience = pgTable("experience", {
-  id: serial("id").primaryKey(),
+export const experience = sqliteTable("experience", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
   role: text("role").notNull(),
   company: text("company").notNull(),
   period: text("period").notNull(),
@@ -41,8 +41,8 @@ export const experience = pgTable("experience", {
   order: integer("order").default(0),
 });
 
-export const education = pgTable("education", {
-  id: serial("id").primaryKey(),
+export const education = sqliteTable("education", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
   degree: text("degree").notNull(),
   institution: text("institution").notNull(),
   year: text("year").notNull(),
@@ -53,7 +53,9 @@ export const education = pgTable("education", {
 // === SCHEMAS ===
 
 export const insertMessageSchema = createInsertSchema(messages).omit({ id: true, createdAt: true });
-export const insertProjectSchema = createInsertSchema(projects).omit({ id: true });
+export const insertProjectSchema = createInsertSchema(projects, {
+  tags: z.array(z.string()),
+}).omit({ id: true });
 export const insertSkillSchema = createInsertSchema(skills).omit({ id: true });
 export const insertExperienceSchema = createInsertSchema(experience).omit({ id: true });
 export const insertEducationSchema = createInsertSchema(education).omit({ id: true });
